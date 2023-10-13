@@ -5,7 +5,7 @@ module "subnet" {
   # virtual_network_output = module.vnet.virtual_network_output
   
   vnet_subnet_list  =   [
-    {
+    # {
     #     name = "sub-ddi-poc-web"
     #     resource_group_name     =   "rg-ddi-poc"
     #     virtual_network_name    =   "vnet-ddi-poc"
@@ -28,7 +28,7 @@ module "subnet" {
 
     # } 
     # ]
-    }
+    # }
 
   ]
 }
