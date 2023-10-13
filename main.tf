@@ -1,3 +1,6 @@
+output "remote_state" {
+  value = data.terraform_remote_state.primary-state
+}
 
 module "subnet" {
   source  = "app.terraform.io/Motifworks/subnet/azurerm"

@@ -10,6 +10,3 @@ data "terraform_remote_state" "primary-state" {
   
 }
 
-output "remote_state" {
-  value = data.terraform_remote_state.primary-state
-}
