@@ -8,7 +8,7 @@ module "subnet" {
     {
         name = "sub-ddi-poc-web"
         resource_group_name     =   data.terraform_remote_state.primary-state.outputs.resource_group_output["rg-ddi-poc"].name
-        virtual_network_name    =   data.terraform_remote_state.primary-state.outputs.virtual_network_out["vnet-ddi-poc"].name
+        virtual_network_name    =   data.terraform_remote_state.primary-state.outputs.virtual_network_output["vnet-ddi-poc"].name
         address_prefixes        =   ["10.100.0.0/24"]
         service_endpoints       =   ["Microsoft.Storage"]
         service_endpoint_policy_ids     =   ["/subscriptions/8694217e-4a30-4107-9a12-aeac74b82f5c/resourceGroups/rg-ddi-poc/providers/Microsoft.Network/serviceEndpointPolicies/ddi-test-poc/"]
