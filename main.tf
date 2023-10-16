@@ -1,8 +1,8 @@
 module "subnet" {
   source  = "app.terraform.io/Motifworks/subnet/azurerm"
   version = "1.0.0"
-  # resource_group_output  = module.resource_Group.resource_group_output
-  # virtual_network_output = module.vnet.virtual_network_output
+   resource_group_output  = data.terraform_remote_state.primary-state.outputs.resource_group_output
+   virtual_network_output = data.terraform_remote_state.primary-state.outputs.virtual_network_output
   
   vnet_subnet_list  =   [
     {
